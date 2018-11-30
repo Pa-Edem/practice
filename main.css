@@ -1,0 +1,325 @@
+﻿/* * {
+    border: 1px solid red;
+} */
+body {
+    margin: 0;
+    font-size: 20px;
+    background-color: #fff;
+}
+section#top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+h1 {
+	width: 50%;
+	color: hsl(0, 60%, 40%);
+    text-align: right;
+}
+nav#nav {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#nav .menu-item {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin: 0 10px;
+    border-bottom: 1px solid #888;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.menu-item .submenu {
+    display: none;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background-color: #eee;
+}
+section.row {
+    display: flex;
+    align-items: center;
+    margin: 0 10vw;
+}
+div.row1 {
+    flex-basis: 10vw;
+    height: 4vh;
+    text-align: center;
+    padding: 1vw;
+    margin-bottom: 0.5vh;
+    border: 1px solid silver;
+}
+div.row2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 10vw;
+    height: 8vh;
+    text-align: center;
+    justify-content: center;
+    padding: 1vw;
+    margin-bottom: 0.5vh;
+    border: 1px solid silver;
+}
+div.row3 {
+    flex-basis: 10vw;
+    height: 4vh;
+    text-align: center;
+    padding: 1vw;
+    margin-bottom: 0.5vh;
+    border: 1px solid silver;
+}
+div.row4 {
+    flex-basis: 10vw;
+    height: 4vh;
+    text-align: center;
+    padding: 1vw;
+    margin-bottom: 0.5vh;
+    border: 1px solid silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div#line {
+    height: 4px;
+    width: 0;
+    background-color: red;
+}
+/* CSS - ГЕНЕРАТОР */
+section.row-gen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw 10vw;
+}
+#w-h, div#d50, div#d51, div#d52, div#d53 {
+    flex-basis: auto;
+    height: 16vh;
+    text-align: center;
+    padding: 1vw;
+    border: 1px solid silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#d52 input {
+    width: 5vw;
+    text-align: center;
+}
+#d53 #rect {
+    width: 20vw;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: #444;
+}
+/* ТАБЫ */
+section#tabs {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#tabs .tab {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 5;
+}
+#tabs .whiteborder {
+    border: 1px solid #707070;
+    border-bottom: 1px solid #fff;
+    border-radius: 5px 5px 0 0;
+}
+#tabs .tabContent {
+    width: 50%;
+    height: 120px;
+    border: 1px solid #707070;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+#tabs .hide {
+    display: none;
+}
+#tabs .show {
+    display: block;
+}
+/* МОДАЛЬНОЕ ОКНО */
+section#m-win {
+    width: 30%;
+    text-align: center;
+    margin: 30px auto;
+}
+#myModal.modal {
+    display: none;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.8);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;;
+}
+.close {
+    float: right;
+    color: #444;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* АНИМАЦИЯ */
+section#anima {
+	display: flex;
+	width: 60%;
+	margin: 30px auto;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid silver;
+}
+#myContainer {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin: 10px;
+	background: #ddd;
+}
+#myAnimation {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	background: #333;
+}
+/* СЛАЙДЕР */
+#slide-container {
+	max-width: 800px;
+	position: relative;
+	margin: auto;
+}
+#slide-container .prev,
+#slide-container .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -40px;
+	padding: 16px;
+	color: #fefefe;
+	font-weight: bold;
+	font-size: 28px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+#slide-container .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+#slide-container .prev:hover,
+#slide-container .next:hover {
+	background-color: rgba(0,0,0,.8);
+}
+#slide-container .numberText {
+	color: #fefefe;
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	padding: 8px 12px;
+}
+#slide-container .text {
+	color: #fefefe;
+	font-size: 16px;
+	position: absolute;
+	bottom: 10px;
+	left: 60%;
+	padding: 8px 12px;
+}
+#slideshow .dot {
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	margin: 0 4px;
+	background-color: #aaa;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+.active, dot:hover {
+	background-color: #717171;
+}
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+	from {opacity: .4;}
+	to {opacity: 1;}
+}
+@keyframes fade {
+	from {opacity: .4;}
+	to {opacity: 1;}
+}
+/* ФИЛЬТРАЦИЯ */
+section#mySearch {
+	width: 70%;
+	margin: 30px auto;
+}
+#inputSearch {
+	width: 97%;
+	font-size: 16px;
+	padding: 12px 20px 12px 12px;
+	margin-bottom: 12px;
+	border: 1px solid #ccc;
+}
+ul#myUl {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#myUl li a {
+	border: 1px solid #ddd;
+	margin-top: -1px;
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block;
+}
+#myUl li a.li-header {
+	background-color: #e2e2e2;
+	cursor: default;
+}
+#myUl li a:hover:not(.li-header) {
+	background-color: #eee;
+}
+/* работа с API googlemap */
+section#apiMaps {
+	width: 100%;
+	margin: 30px 0;
+}
+section#apiMaps #map {
+	max-width: 800px;
+	max-height: 500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+
+

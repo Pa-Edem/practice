@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS practice</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- menu -->
+    <section id="top">
+        <h1>Практика JavaScript</h1>
+        <nav id="nav">
+            <div class="menu-item">меню 1
+                <div class="submenu">подменю 11</div>
+            </div>
+            <div class="menu-item">меню 2
+                <div class="submenu">подменю 21</div>
+            </div>
+            <div class="menu-item">меню 3
+                <div class="submenu">подменю 31</div>
+            </div>
+        </nav>
+    </section>
+    <!-- checkbox -->
+    <section class="row">
+        <div id="d10" class="row1"><strong>Checkbox</strong></div>
+        <div id="d11" class="row1">
+            <label><input type="checkbox" id="cbox" onchange="foo1()">Выбери меня</label>
+        </div>
+        <div id="d12" class="row1"></div>
+    </section>
+    <!-- radiobutton -->
+    <section class="row">
+        <div id="d20" class="row2">
+            <strong>Radiobutton</strong>
+            <button onclick="foo2()">Проверить</button>
+        </div>
+        <div id="d21" class="row2">
+            <label><input type="radio" name="r1" id="rd1" value="1">1</label>
+            <label><input type="radio" name="r1" id="rd2" value="2">2</label>
+            <label><input type="radio" name="r1" id="rd3" value="3">3</label>
+        </div>
+        <div id="d22" class="row2"></div>
+    </section>
+    <!-- select -->
+    <section class="row">
+        <div id="d30" class="row3"><strong>Select</strong></div>
+        <div id="d31" class="row3">
+            <select name="" id="mySelect" onchange="foo3()">
+                <option value="0"></option>
+                <option value="1">Первый</option>
+                <option value="2">Второй</option>
+                <option value="3">Третий</option>
+            </select>
+        </div>
+        <div id="d32" class="row3"></div>
+    </section>
+    <!-- range -->
+    <section class="row">
+        <div id="d40" class="row4"><strong>Range</strong></div>
+        <div id="d41" class="row4">
+            <input type="range" min="0" max="100" step="1" value="0" id="myRange" oninput="foo4()">
+        </div>
+        <div id="d42" class="row4">
+            <span id="s42"></span>
+            <div id="line"></div>
+        </div>
+    </section>
+    <!-- CSS генератор -->
+    <section class="row-gen">
+        <div id="w-h">
+            <label for="width">Ширина в px</label>
+            <input type="number" name="width" id="width" oninput="foo5()">
+            <label for="height">Высота в px</label>
+            <input type="number" name="height" id="height" oninput="foo5()">
+        </div>
+        <div id="d50" class="row5">
+            <div>TOP-LEFT</div>
+            <div>TOP-RIGHT</div>
+            <div>BOTTOM-RIGHT</div>
+            <div>BOTTOM-LEFT</div>
+        </div>
+        <div id="d51" class="row5">
+            <input type="range" min="0" max="100" step="1" id="rtl" value="0" oninput="foo5()">
+            <input type="range" min="0" max="100" step="1" id="rtr" value="0" oninput="foo5()">
+            <input type="range" min="0" max="100" step="1" id="rbr" value="0" oninput="foo5()">
+            <input type="range" min="0" max="100" step="1" id="rbl" value="0" oninput="foo5()">
+        </div>
+        <div id="d52" class="row5">
+            <label><input type="text" name="" id="ttl" value="0"> px</label>
+            <label><input type="text" name="" id="ttr" value="0"> px</label>
+            <label><input type="text" name="" id="tbr" value="0"> px</label>
+            <label><input type="text" name="" id="tbl" value="0"> px</label>
+        </div>
+        <div id="d53" class="row5">
+            <div id='rect'></div>
+        </div>
+    </section>
+    <!-- табы -->
+    <section id="tabs">
+        <div class="tab whiteborder">tab 1</div>
+        <div class="tab">tab 2</div>
+        <div class="tab">tab 3</div>
+        <div class="tabContent">Content 1</div>
+        <div class="tabContent">Content 2</div>
+        <div class="tabContent">Content 3</div>
+    </section>
+    <!-- модальное окно -->
+    <section id="m-win">
+        <button id="myBtn">OPEN MODAL</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Модальное окно</p>
+            </div>
+        </div>
+    </section>
+    <!-- анимация -->
+    <section id="anima">
+		<button onclick="myMove()">ANIMATION</button>
+		<div id="myContainer">
+			<div id="myAnimation"></div>
+		</div>
+	</section>
+	<!-- слайдер -->
+	<section id="slideshow">
+		<div id="slide-container">
+			<div class="mySlides fade">
+				<div class="numberText">1/3</div>
+				<img src="images/01.jpg" style="width:100%" alt="">
+				<div class="text">Описание 1</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numberText">2/3</div>
+				<img src="images/02.jpg" style="width:100%" alt="">
+				<div class="text">Описание 2</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numberText">3/3</div>
+				<img src="images/03.jpg" style="width:100%" alt="">
+				<div class="text">Описание 3</div>
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094</a>
+			<a class="next" onclick="plusSlides(1)">&#10095</a>
+		</div>
+		<div style="text-align:center;">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</section>
+	<!-- фильрация -->
+	<section id="mySearch">
+		<input type="text" id="inputSearch" placeholder="Поиск по сайту..." onkeyup="funSearch()">
+		<ul id="myUl">
+			<li><a href="№" class="li-header">A</a></li>
+				<li><a href="№">Accommodation</a></li>
+				<li><a href="№">Anomaly</a></li>
+				<li><a href="№">Accord</a></li>
+			<li><a href="№" class="li-header">B</a></li>
+				<li><a href="№">Blackness</a></li>
+				<li><a href="№">Balance</a></li>
+				<li><a href="№">Beginning</a></li>
+			<li><a href="№" class="li-header">C</a></li>
+				<li><a href="№">Centre</a></li>
+				<li><a href="№">Cabinet</a></li>
+				<li><a href="№">Circumstance</a></li>
+		</ul>
+	</section>
+	<!-- работа с API googlemap -->
+	<section id="apiMaps">
+		<div id="map"></div>
+	</section>
+
+	<script src="main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT85i-Sot39GPH-vtezJaC5TkratETS_8&callback=initMap"
+		async defer></script>
+</body>
+</html>
