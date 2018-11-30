@@ -212,8 +212,8 @@ function funSearch() {
 // работа с API googlemap
 /////////////////////////////////////////////////////
 function initMap() {
-	let myLatLng = {lat: 68.963, lng: 33.097};
-	let map = new google.maps.Map(document.getElementById('map'), {center: myLatLng, zoom: 16});
+	var myLatLng = {lat: 68.963, lng: 33.097};
+	var map = new google.maps.Map(document.getElementById('map'), {center: myLatLng, zoom: 16});
 }
 
 
