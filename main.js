@@ -209,11 +209,21 @@ function funSearch() {
 	}
 }
 /////////////////////////////////////////////////////
-// работа с API googlemap
+// работа с API yandexMaps
 /////////////////////////////////////////////////////
-function initMap() {
-	var myLatLng = {lat: 68.963, lng: 33.097};
-	var map = new google.maps.Map(document.getElementById('map'), {center: myLatLng, zoom: 16});
+var myMap;
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+function init () {
+    // Создание карты, привязка к контейнеру с id ("map"). Обязательно указать центр и масштаб
+    myMap = new ymaps.Map('map', {center: [68.96, 33.11], zoom: 10}, 
+								 {searchControlProvider: 'yandex#search'});
 }
+/////////////////////////////////////////////////////
+// 
+/////////////////////////////////////////////////////
+
+
+
 
 
